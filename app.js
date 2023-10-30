@@ -2,22 +2,22 @@ const app = Vue.createApp({
   data() {
     return {
       name: "",
-      showN: "",
-      finalN: "",
+      showedName: "",
+      confirmedName: "",
     };
   },
   methods: {
     showAlert() {
       alert("Hello World!");
     },
+    showName(event) {
+      this.showedName = event.target.value;
+    },
     setName(event) {
       this.name = event.target.value;
     },
-    showName() {
-      this.showN = this.name;
-    },
     finalName() {
-      this.finalN = this.name;
+      this.confirmedName = this.name;
     },
   },
 });
